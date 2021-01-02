@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: azure;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 150px auto;
+  width: 50%;
+}
+
+button {
+  border: solid 1px red;
+  border-radius: 80px;
+  width: 200px;
+  height: 150px;
+  max-width: 90%;
+  font-size: 2em;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  outline: none;
+}
+
+button:active {
+  border: solid 1px black;
+  box-shadow: none;
+}
+
+#result {
+  width: 50%;
+  text-align: center;
+  margin: 80px auto;
+  border: dotted 2px burlywood;
+}
+
+#result h2 {
+  padding-top: 30px;
+}
+#result :nth-child(2) {
+  padding-bottom: 30px;
+}

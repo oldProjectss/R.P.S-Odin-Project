@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock, Paper, Scissors Game</title>
+  </head>
+
+  <body>
+    <div class="buttons">
+      <button onClick="playRound('ROCK')" class="rock">Rock</button>
+      <button onClick="playRound('PAPER')" class="paper">Paper</button>
+      <button onClick="playRound('SCISSORS')" class="scissors">Scissors</button>
+    </div>
+
+    <div id="result">
+      <h2 id="round"></h2>
+      <h2 id="message"></h2>
+    </div>
+
+    <script src="./game.js "></script>
+    <script>
+      const roundMessage = document.querySelector("#round");
+      const message = document.querySelector("#message");
+
+      function Ui() {
+        if (playerPoint === 5) {
+          roundMessage.style.cssText = "font-size: 3em;";
+          roundMessage.textContent = "You are the WINNER!";
+        } else if (computerPoint === 5) {
+          roundMessage.style.cssText = "font-size: 3em;";
+          roundMessage.textContent = "You lost the Game!";
+        } else {
+          roundMessage.style.cssText = "font-size: 2em;";
+          roundMessage.textContent = `${round}`;
+          message.textContent = `Player has ${playerPoint} point.\n Computer has ${computerPoint} point.`;
+        }
+      }
+    </script>
+  </body>
+</html>
